@@ -33,12 +33,6 @@ const apiLimiter = rateLimit({
 app.use("/api/", apiLimiter);
 
 app.use(express.json());
-
-// Example: import and use your routes
-// const customerRoutes = require('./api/customers');
-// app.use('/api/customers', customerRoutes);
-
-// Healthcheck
 app.get("/health", (req, res) => res.status(200).send("OK"));
 
 // Error handler
